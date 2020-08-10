@@ -585,7 +585,7 @@ function getErrorResponseMsg( statusCode ) {
     statusCode = ( typeof statusCode !== 'undefined' ) ? statusCode.toString() : 'undefined';
 
     if ( statusMap[ statusCode ] ) {
-        msg = `${statusMap[ statusCode ]} (${statusCode})`;
+        msg = `${statusMap[ statusCode ]}`;
     } else if ( statusMap[ statusCode.replace( statusCode.substring( 1 ), 'xx' ) ] ) {
         msg = `${statusMap[ statusCode.replace( statusCode.substring( 1 ), 'xx' ) ]} (${statusCode})`;
     } else {
